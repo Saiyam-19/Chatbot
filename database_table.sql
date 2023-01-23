@@ -110,14 +110,3 @@ CREATE INDEX messages_member_id_idx ON messages (member_id);
 ALTER TABLE message_read ADD CONSTRAINT message_read_unique UNIQUE (message_id, member_id);
 ALTER TABLE message_read ADD CHECK (is_read IN (true, false));
 
-
-
-
-
-
-
-
--- create new table for organization_channel 
--- add channel type attribute in channerls table
--- plan table only 2 entry
--- organization_plan would have plan id as 1 or 2
