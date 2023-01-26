@@ -35,7 +35,7 @@ CREATE TABLE plans (
 
 -- Organization plans table
 CREATE TABLE organization_plans (
-  organization_id INT REFERENCES organizations(id),
+  organization_id INT REFERENCES organizations(id) UNIQUE,
   plan_id INT REFERENCES plans(id),
   created_at TIMESTAMP NOT NULL DEFAULT NOW(),
   updated_at TIMESTAMP NOT NULL DEFAULT NOW()
