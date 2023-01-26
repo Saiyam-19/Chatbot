@@ -45,7 +45,7 @@ CREATE TABLE organization_plans (
 CREATE TYPE channel_type as ENUM('Personal', 'Group');
 CREATE TABLE channels (
   id SERIAL PRIMARY KEY,
-  channel_type channel_type;
+  channel_type channel_type NOT NULL;
   name VARCHAR(255) NOT NULL,
   created_at TIMESTAMP NOT NULL DEFAULT NOW(),
   updated_at TIMESTAMP NOT NULL DEFAULT NOW()
