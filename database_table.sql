@@ -20,7 +20,7 @@ CREATE TYPE roles as ENUM('organization_head', 'member');
 CREATE TABLE organization_members (
   organization_id INT REFERENCES organizations(id),
   member_id INT REFERENCES members(id),
-  role roles ,
+  role roles NOT NULL ,
   created_at TIMESTAMP NOT NULL DEFAULT NOW(),
   updated_at TIMESTAMP NOT NULL DEFAULT NOW()
 );
